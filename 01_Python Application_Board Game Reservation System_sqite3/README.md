@@ -18,7 +18,7 @@ This project is a simple game reservation system using SQLite. Users can check a
 1. Clone the repository or download the script.
 2. Run the script using:
    ```bash
-   python game_reservation.py
+   Board Game Reservation System_sqite3.ipynb
    ```
 3. Follow the prompts to interact with the reservation system.
 
