@@ -1,4 +1,4 @@
-# Game Reservation System
+# Board Game Reservation System_SQLite
 
 This project is a simple game reservation system using SQLite. Users can check available games, make reservations, and cancel their reservations.
 
