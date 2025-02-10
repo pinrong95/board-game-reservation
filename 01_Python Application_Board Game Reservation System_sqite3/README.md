@@ -1,39 +1,43 @@
-Game Reservation System
-This program is a simple game reservation system using an SQLite database to store game data. Users can query available games, make reservations, or cancel existing reservations.
+# Game Reservation System
 
-Features
-Initialize Game Data: The program creates a reservation table in the database and inserts a few games.
-Query Available Games: When the user sends the message "Show game types", the system returns the list of games that are available for reservation.
-Reserve a Game: The user can send the message "I want to reserve <game name>" to reserve a game. If the game is not yet reserved, the system will reserve it for the user.
-Cancel Reservation: The user can send the message "I want to cancel my reservation" to cancel all of their reservations.
-Installation and Usage
-1. Install Python and SQLite
-This program requires Python 3.x and the SQLite library. If Python is not installed, visit the official Python website to download and install it.
+This project is a simple game reservation system using SQLite. Users can check available games, make reservations, and cancel their reservations.
 
-2. Run the Program
-Download or copy this program.
-Run the program in the command line or terminal:
-bash
-複製
-編輯
-python game_reservation.py
-Follow the prompts to interact with the system.
-3. Feature Operations
-Query Available Games: Type Show game types to see the available games for reservation.
-Reserve a Game: Type I want to reserve <game name>, for example, I want to reserve Little Valon.
-Cancel Reservation: Type I want to cancel my reservation to cancel all reservations.
-4. Exit the Program
-Type End to stop the program.
+## Features
+- **Initialize Game Data**: Creates a `reservation` table and adds sample games.
+- **Check Available Games**: Lists all games that are not yet reserved.
+- **Reserve a Game**: Users can reserve a game by specifying its name.
+- **Cancel Reservation**: Users can cancel their reservation at any time.
 
-Parameter Explanation
-user_id: Each user has a unique user_id to identify and manage their reservations.
-game: The name of the reserved game.
-Database Structure
-The reservation table has the following columns:
-id: Unique identifier for each game.
-game: Name of the game.
-user_id: Unique identifier for the user. If the game is not reserved, it is NULL.
-Notes
-When a game is already reserved by another user, the system will respond with "This game is already reserved! Sorry".
-If the reservation is successfully canceled, the system will respond with "Your reservation has been canceled".
-I hope this English README is helpful for users to understand how to use your program! Let me know if you need further adjustments or additions.
+## Installation & Usage
+
+### Prerequisites
+- Python 3.x
+- SQLite3 (included with Python)
+
+### Running the Program
+1. Clone the repository or download the script.
+2. Run the script using:
+   ```bash
+   python game_reservation.py
+   ```
+3. Follow the prompts to interact with the reservation system.
+
+### Commands
+- **Show Available Games**: Type `Show game types`
+- **Reserve a Game**: Type `I want to reserve <game name>`
+- **Cancel Reservation**: Type `I want to cancel my reservation`
+- **Exit the Program**: Type `End`
+
+## Database Structure
+- **reservation Table**
+  - `id` (INTEGER, PRIMARY KEY): Unique game ID
+  - `game` (TEXT): Game name
+  - `user_id` (TEXT, NULLABLE): ID of the user who reserved the game
+
+## Notes
+- If a game is already reserved, users will be notified.
+- If a reservation is successfully canceled, the system will confirm the cancellation.
+
+## License
+This project is open-source and available under the MIT License.
+
